@@ -183,10 +183,10 @@ To improve documentation structure and control how research and build data are s
 
 ---
 
-## Searches Performed (Chronological Order from 7:33 PM to 8:00 PM)
+## Searches Performed (Chronological Order )
 
-7:33 PM  - (77) YouTube youtube.com  
 7:35 PM  - Accilator - YouTube youtube.com  
+7:33 PM  - (77) YouTube youtube.com  
 7:38 PM  - Accilator coding - YouTube youtube.com  
 7:40 PM  - Akilator - YouTube youtube.com  
 7:40 PM  - What is the Akinator algorithm? - YouTube youtube.com  
