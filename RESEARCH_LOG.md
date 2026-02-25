@@ -441,3 +441,93 @@ Focus on decision logic clarity over UI design.
 - Copied ChatGPT’s generated response and executed it in AntiGravity to build the app.
 
 ---
+# Day 4
+
+## Objective
+To research web scraping implementation, data sources for speakers, Python setup, and legality/ethics of scraping.
+
+---
+
+## Searches Performed (Chronological Order)
+
+10:20 AM - Pranavdas-l (Pranav Das) github.com  
+10:22 AM - Web Scraper - The #1 web scraping extension webscraper.io  
+10:32 AM - WEB SCRAPING - Google Search google.com  
+
+2:05 PM - Sign up for GitHub • GitHub github.com  
+2:06 PM - Sign in - Google Accounts accounts.google.com  
+2:06 PM - web scrapping - Google Search google.com  
+2:07 PM - beautiful soup - Google Search google.com  
+2:08 PM - YouTube youtube.com  
+2:08 PM - (77) beautifu soap - YouTube youtube.com  
+2:08 PM - (77) beautiful soap - YouTube youtube.com  
+2:09 PM - beautiful soap - Google Search google.com  
+2:09 PM - Search results • PyPI pypi.org  
+4:30 PM - beautiful soup - Google Search google.com  
+4:31 PM - chatgpt.com chatgpt.com  
+4:31 PM - notebook 11m - Google Search google.com  
+4:32 PM - beautifulsoup4 • PyPI pypi.org  
+4:44 PM - dictonary in all progrmaing language - Google Search google.com  
+4:59 PM - chatgpt.com chatgpt.com  
+
+5:24 PM - JBL Charge 6 Review - RTINGS.com rtings.com  
+5:24 PM - Search Results - RTINGS.com rtings.com  
+5:24 PM - Speaker Reviews - RTINGS.com rtings.com  
+5:25 PM - Compare Speakers, Find Best Speakers, Price, Battery Life gadgets360.com  
+5:25 PM - boat search results - Gadgets 360 gadgets360.com  
+7:35 PM - Boat Stone Spinx Pro Bluetooth Speaker with 20 W RMS Sound, Up to 8 hrs  
+
+7:59 PM - Python Dictionary - GeeksforGeeks geeksforgeeks.org  
+7:59 PM - Python Dictionary Methods - GeeksforGeeks geeksforgeeks.org  
+7:59 PM - how to run venv - Google Search google.com  
+
+8:22 PM - how to web scrapping - Google Search google.com  
+8:23 PM - beautiful soup pypi - Google Search google.com  
+8:23 PM - All You Need to Know About Speakers in Audio Design I Same Sky sameskydevices.com  
+8:23 PM - site i can get all imformation about speaker - Google Search google.com  
+8:23 PM - Search results • PyPI pypi.org  
+8:23 PM - Beautiful Soup Documentation — Beautiful Soup 4.4.0 documentation beautiful-soup-4.readthedocs.io  
+
+9:50 PM - GitHub github.com  
+9:50 PM - BeautifulSoup + Requests I Web Scraping in Python - YouTube youtube.com  
+9:50 PM - Beautiful Soup Documentation — Beautiful Soup 4.13.0 documentation crummy.com  
+
+---
+
+## AI Prompts Used
+
+
+1. Should the application work offline or not Can I use ai model to collect data about a peoduct
+
+2. My idea is that the user gave the speaker name so either intry to web scrap the data from the internet or Built a Web Scraping Al Agent - Use Al To Scrape ANYTHING
+Is this a good idea is it allowed
+
+3. My thought was either user enter the name of product and all criteria manually Else, he drop product link then I should web scrap the product using the link and get enough data but there might be an issue if the link is only about the product and I don't get that much info Final one is user drop product name i web scrap data using the name but issue occur if the browser don't allow me to scrap details if it allowed me I use an ai agent to convert the data into meaning ful data so I can use it on my model to run it
+
+4. Ia scraping amazon and flipkart non ethical or illigal
+
+5. Is Amazon Advertising API free to use so I can't use it
+
+
+---
+
+## What I Did
+
+- Researched web scraping methods and tools.
+- Explored BeautifulSoup documentation and PyPI.
+- Checked Python dictionary usage and virtual environment setup.
+- Created / accessed GitHub account and repositories.
+- Explored speaker data sources (Gadgets360, RTINGS, product pages).
+- Investigated legality and ethics of scraping Amazon and Flipkart.
+- Considered using AI for data extraction and structuring.
+- Evaluated whether the system should work offline or rely on live scraping.
+
+---
+
+## Summary
+
+- Focused on implementation of web scraping for speaker data.
+- Explored data source reliability.
+- Evaluated legality of scraping and API usage.
+- Investigated integration of AI for structuring scraped data.
+- Researched Python setup (venv, BeautifulSoup, dictionary usage).
