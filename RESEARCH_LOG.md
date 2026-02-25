@@ -8,7 +8,6 @@ Inferred Objective: To understand what the assignment expects and how to start.
 
 ## AI Prompt Used
 
-
 1. Congratulations on being shortlisted from the programming test conducted at your college.
 
 As the next step in our evaluation process, we would like you to complete a take-home assignment. This round is intentionally different from a traditional coding test.
@@ -19,70 +18,44 @@ We are not only evaluating the final solution.
 As our CEO puts it:
 
 “We want to see how you build.”
-
 This assignment is designed to evaluate:
-
 How clearly you document your thinking
-
 How you approach ambiguous problems
-
 Your system design and architectural decisions
-
 How you leverage tools (including AI)
-
 Your transparency in the build process
 
 Problem Statement:
 Design and build a “Decision Companion System” that helps a user make better decisions.
-
 The system should assist a user in evaluating options for a real-world decision of their choice.
-
 Your system must work without relying entirely on an AI model. If AI is used, clearly justify its role and limitations.
-
 Examples (you are NOT limited to these):
-
 Choosing a laptop under a budget
-
 Selecting the best candidate for a job role
-
 Deciding where to travel within constraints
-
 Picking an investment strategy
-
 Choosing a tech stack for a startup
 
 Core Expectations:
 Your system must:
-
 Accept multiple options
-
 Accept criteria (which may have different weights or importance)
-
 Process and evaluate options against criteria
-
 Provide a ranked recommendation
-
 Explain why a particular recommendation was made
-
 Beyond this, the design is up to you.
 
 You may choose:
 
 CLI / Web App / API / Desktop tool
-
 Any programming language
-
 Any framework
-
 Simple or advanced logic
-
 You define the depth. We are more interested in your thinking than feature count.
 
 Constraints
 The system should not be a static hard coded comparison.
-
 The user should be able to change inputs and get different outcomes.
-
 Your logic should be explainable (not a black box).
 
 Deliverables
@@ -112,59 +85,37 @@ What you would improve with more time
 
 3. Design Diagram
 Provide at least one:
-
 Architecture diagram
-
 Data flow diagram
-
 Component diagram
-
 Or decision logic diagram
 
 4. BUILD_PROCESS.md
 Explain:
-
 How you started
-
 How your thinking evolved
-
 Alternative approaches considered
-
 Refactoring decisions
-
 Mistakes and corrections
-
 What changed during development and why
 
 5. RESEARCH_LOG.md
 Include:
-
 All AI prompts used
-
 All search queries (including Google searches)
-
 References that influenced your approach
-
 What you accepted, rejected, or modified from AI outputs
-
 We are not judging you for using AI.
 We are evaluating how effectively and responsibly you use it.
 
 Evaluation Criteria
 You will be evaluated on:
-
 Clarity of thinking
-
 Problem structuring ability
-
 Quality of documentation
-
 Transparency in build process
-
 Design maturity
-
 Practical reasoning
-
 Code quality
 
 Timeline
@@ -178,18 +129,23 @@ what do they expect and what to do how to start
 
 ---
 
+## What I Searched
+
+- www.chatgpt.com
+
+---
+
 ## What I Did
 
 - Shared the assignment mail with ChatGPT.
 - Asked what they expect and how to start.
+- Contacted Christo Jose and Jithu Girish to get a clearer idea of what the task actually meant and what needed to be done.
+- Clarified my doubts through discussion.
+- From that conversation, learned about the AKINATOR concept.
+
 
 ---
 
-## What I Accepted
-
-- Used the explanation to understand how to approach the assignment.
-
----
 
 
 ## Impact on System Design
@@ -198,7 +154,7 @@ what do they expect and what to do how to start
 
 ---
 
- 2
+
 # Day 2
 
 ## Objective
@@ -227,8 +183,25 @@ To improve documentation structure and control how research and build data are s
 
 ---
 
+## Searches Performed (Chronological Order from 7:33 PM to 8:00 PM)
+
+7:33 PM  - (77) YouTube youtube.com  
+7:35 PM  - Accilator - YouTube youtube.com  
+7:38 PM  - Accilator coding - YouTube youtube.com  
+7:40 PM  - Akilator - YouTube youtube.com  
+7:40 PM  - What is the Akinator algorithm? - YouTube youtube.com  
+8:00 PM  - ambiguous problems - Google Search google.com  
+
+---
+## What I Did
+
+- Watched multiple YouTube videos related to Akinator and similar logic.
+- Searched about ambiguous problems.
+- Researched the Akinator algorithm on YouTube.
+
+---
+
 ## Summary
 
-- Focused on improving documentation control.
-- Structured how AI should generate development logs.
-- Ensured time-wise tracking and transparency in AI usage.
+- Explored Akinator-based guessing/decision algorithms.
+- Looked into ambiguous problem concepts.
