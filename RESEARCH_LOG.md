@@ -1,6 +1,3 @@
-# RESEARCH_LOG.md
-
----
 
 # Day 1 — 21/02/2026
 
@@ -200,3 +197,38 @@ what do they expect and what to do how to start
 - Helped me understand how to begin the assignment.
 
 ---
+
+ 2
+# Day 2
+
+## Objective
+To improve documentation structure and control how research and build data are stored and generated.
+
+---
+
+## AI Prompts Used (Chronological Order)
+
+1. Can u help me to say to chat gpts next page to create a proper build and research md as i do from the given data and promts i give u know what to add from the given data add proper promt i give u say this to chat gpt to add dat time wise data and informations 
+
+2.You are helping me document my development process for a system design assignment. I will provide: - Raw notes - Partial thoughts - AI prompts used - Code snippets - Screenshots descriptions - Rough timestamps (if available) Your task is to generate a professional BUILD_PROCESS.md file. Requirements: 1. Structure it chronologically (time-wise evolution). 2. Clearly show how my thinking evolved. 3. Include: - Initial understanding of the problem - First approach and why I chose it - Problems encountered - Refactoring decisions - Architecture changes - Alternative approaches considered - Mistakes made and corrections - Trade-offs evaluated - Why final structure was chosen 4. Add realistic timestamps progression (Day 1, Day 2, Iteration 1, etc.) if exact time is not given. 5. Keep tone reflective and analytical (not storytelling, not casual). 6. Do NOT fabricate technologies I didn’t mention. 7. If gaps exist, intelligently infer reasonable development steps based on software engineering best practices. 8. Highlight decision maturity and transparency. 9. Show where AI was used and where I rejected AI suggestions. 10. Output in clean Markdown format ready for GitHub. Wait for my raw data before generating. 
+
+3.I am building a Decision Companion System. I will now provide: - Development notes - AI prompts used - Research queries - Refactoring steps - Architecture sketches descriptions Your task: Generate two separate markdown files: 1. BUILD_PROCESS.md 2. RESEARCH_LOG.md Both must: - Be structured chronologically - Show evolution of thinking - Include time-wise progression (Day 1, Day 2, etc.) - Highlight architectural decisions - Show transparency in AI usage - Demonstrate design maturity - Be formatted cleanly for GitHub Do not fabricate tools or features not mentioned. If necessary, logically infer development iteration steps consistent with best engineering practices. Wait for my data before generating. 
+
+4.the research md page chatgpt page is not collecting and storing the data correctlymake me to correct it by giving best promt
+
+---
+
+## What I Did
+
+- Asked ChatGPT to generate structured prompts for creating proper BUILD and RESEARCH markdown files.
+- Tried to correct how research data was being collected and stored.
+- Refined prompts to enforce chronological structure and transparency.
+- Added missing prompts to Day 2 documentation.
+
+---
+
+## Summary
+
+- Focused on improving documentation control.
+- Structured how AI should generate development logs.
+- Ensured time-wise tracking and transparency in AI usage.
