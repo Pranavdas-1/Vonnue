@@ -205,3 +205,239 @@ To improve documentation structure and control how research and build data are s
 
 - Explored Akinator-based guessing/decision algorithms.
 - Looked into ambiguous problem concepts.
+
+# Day 3
+
+## Objective
+To research multi-criteria decision-making methods and generate the full Speaker Decision Companion System using AntiGravity.
+
+---
+
+## Searches Performed (Chronological Order)
+
+10:06 PM - Making a smaller version of akinator game with if and else - YouTube youtube.com  
+10:22 PM - Akilator algorithm - YouTube youtube.com  
+10:25 PM - How to Create a Weighted Scoring Model - YouTube youtube.com  
+10:38 PM - Weighted Scoring Model - YouTube youtube.com  
+10:41 PM - Multi-Criteria Decision Analysis (MCDA) - YouTube youtube.com  
+10:41 PM - Multi-Criteria Decision Analysis (MCDA) coding - YouTube youtube.com  
+10:43 PM - Home Assignment for the Shortlisted Candidates at Vonnue - We Want to See How Yo  
+10:52 PM - Normalization / Standardization - YouTube youtube.com  
+10:52 PM - Glimpse of KH x RK Reunion - Tamil I Kamal Haasan I Rajinikanth I Nelson I Anirudh I F  
+10:56 PM - Multi Criteria Decision Making - Example - YouTube youtube.com  
+
+11:01 PM - Multi Criteria Decision Making - Introduction - YouTube youtube.com  
+11:01 PM - Multi Criteria Decision Making - Introduction - YouTube youtube.com  
+11:02 PM - Google Gemini gemini.google.com  
+11:04 PM - chatgpt.com chatgpt.com  
+
+11:08 PM - Decision Companion System Design chatgpt.com  
+11:08 PM - Email Count Calculation chatgpt.com  
+11:09 PM - Analytic Hierarchy Process (AHP) (optional advanced) - YouTube youtube.com  
+11:10 PM - Analytic Hierarchy Process (AHP) - YouTube youtube.com  
+
+---
+
+## AI Prompt Used (for AntiGravity Prompt Generation)
+
+
+give me the best promt to say to anti gravity to develop the project it should be minimal my idea is a comanion app for chosing best speaker on market based on criterias such as 1. priority 2. comapny 3. clarity 4. distortion at max vaolume , 5 look 6 size 7 how it can be standed portrit or landed 8 heavyneess 9 batter backup 10 som companyy record battery while plaing on only 50 to 60 persentage volue thats kind of cheting so priority to that as well 11 so product after 6 8 month become less clariy eg voat , multi paring 15 bass 16 accesory additional 17 ip rating 18 charing type and how fat the charge 20 watt 21 no,. of speaker 22durability, and bluthooth version and app support use weight and AHP Analytic Hierarchy Process or rulw based as prefasred and penalty i will all data s
+
+
+---
+
+## Prompt Used in AntiGravity
+
+
+Build a minimal but well-structured web application called:
+
+"Speaker Decision Companion System"
+
+Objective:
+Create a decision-support system that helps users choose the best Bluetooth speaker in the market based on multiple weighted criteria.
+
+CRITICAL REQUIREMENTS:
+
+The system must NOT rely on an AI model for ranking.
+
+The decision logic must be deterministic and explainable.
+
+Use either:
+
+Weighted Scoring Model + Normalization
+OR
+
+Analytic Hierarchy Process (AHP)
+
+Include rule-based penalty system for misleading specifications (e.g., battery claimed at 50–60% volume).
+
+Architecture must be modular and clean.
+
+Keep UI minimal and functional (no heavy design).
+
+CORE FEATURES
+
+The system must:
+
+• Accept multiple speaker options
+• Allow user-defined weights for each criterion
+• Normalize numeric values
+• Support benefit and cost criteria
+• Apply penalties where applicable
+• Rank speakers
+• Generate explanation for ranking
+
+CRITERIA TO INCLUDE
+
+Brand priority
+
+Sound clarity
+
+Distortion at max volume (cost criterion)
+
+Look / aesthetics
+
+Size
+
+Orientation support (portrait / landscape / both)
+
+Heaviness (cost criterion)
+
+Battery backup (actual tested hours preferred)
+
+Penalty if battery claim based on 50–60% volume
+
+Long-term clarity degradation risk (brand reliability penalty)
+
+Multi-pairing support
+
+Bass quality
+
+Accessories included
+
+IP rating
+
+Charging type (USB-C preferred)
+
+Charging wattage (faster charging = benefit)
+
+Number of drivers/speakers
+
+Durability build quality
+
+Bluetooth version
+
+App support availability
+
+SCORING LOGIC
+
+Implement:
+
+Step 1: Normalize numeric attributes (0–1 scale)
+Step 2: Apply weight multipliers
+Step 3: Subtract penalties
+Step 4: Calculate final score
+Step 5: Rank descending
+
+If using AHP:
+
+Create pairwise comparison matrix
+
+Compute consistency ratio
+
+Derive weights
+
+Then score speakers accordingly
+
+PENALTY SYSTEM
+
+Examples:
+
+If battery tested only at 50–60% volume → -X% penalty
+
+Known clarity drop after 6–8 months → reliability penalty
+
+Older Bluetooth version (<5.0) → penalty
+
+Micro-USB charging → penalty
+
+Penalties must be configurable.
+
+OUTPUT
+
+For each speaker show:
+
+Final Score
+
+Weighted breakdown
+
+Penalty breakdown
+
+Top influencing criteria
+
+Why it ranked at that position
+
+Explanation must be rule-based, not AI-generated.
+
+TECH STACK
+
+Keep minimal:
+
+Backend: Python (FastAPI)
+Frontend: Simple HTML + minimal CSS OR CLI version
+No database required (JSON input is enough)
+
+ARCHITECTURE
+
+Separate modules:
+
+models.py
+
+scoring_engine.py
+
+normalization.py
+
+penalty_engine.py
+
+ahp_module.py (if AHP used)
+
+explanation_engine.py
+
+main.py
+
+NON-FUNCTIONAL REQUIREMENTS
+
+Clean, readable code
+
+Modular structure
+
+Easily extendable criteria
+
+No hardcoded speaker comparison
+
+Input must be dynamic
+
+DELIVERABLE STRUCTURE
+
+decision-companion/
+│
+├── app/
+├── README.md
+├── DESIGN.md
+└── requirements.txt
+
+Keep the project minimal but architecturally strong.
+Focus on decision logic clarity over UI design.
+
+
+---
+
+## What I Did
+
+- Researched Weighted Scoring Model, MCDA, Normalization, Rule-based scoring system and AHP.
+- Watched multiple YouTube videos on decision-making algorithms.
+- Downloaded AntiGravity.
+- Generated a full speaker decision-making application using the structured prompt.
+- Copied ChatGPT’s generated response and executed it in AntiGravity to build the app.
+
+---
