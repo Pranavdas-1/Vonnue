@@ -155,7 +155,7 @@ what do they expect and what to do how to start
 ---
 
 
-# Day 2
+# Day 2 22/02/2026
 
 ## Objective
 To improve documentation structure and control how research and build data are stored and generated.
@@ -206,7 +206,7 @@ To improve documentation structure and control how research and build data are s
 - Explored Akinator-based guessing/decision algorithms.
 - Looked into ambiguous problem concepts.
 
-# Day 3
+# Day 3 23/02/2026
 
 ## Objective
 To research multi-criteria decision-making methods and generate the full Speaker Decision Companion System using AntiGravity.
@@ -441,7 +441,7 @@ Focus on decision logic clarity over UI design.
 - Copied ChatGPT’s generated response and executed it in AntiGravity to build the app.
 
 ---
-# Day 4
+# Day 4 24/02/2026
 
 ## Objective
 To research web scraping implementation, data sources for speakers, Python setup, and legality/ethics of scraping.
@@ -531,3 +531,124 @@ Is this a good idea is it allowed
 - Evaluated legality of scraping and API usage.
 - Investigated integration of AI for structuring scraped data.
 - Researched Python setup (venv, BeautifulSoup, dictionary usage).
+
+
+# Day 5 — 27/02/2026
+
+## Objective
+To deeply research decision-making algorithms, compare AHP vs MCDA vs TOPSIS, study implementation details, and refine the architecture of the Speaker Decision Companion System.
+
+---
+
+## Searches Performed (Chronological Order)
+
+10:38 PM - decisionmaking-code-py/LlCENSE at main • griffinbholt/decisionmaking-code-py github.com  
+10:39 PM - algorithmsbooks/decisionmaking-code: All typeset code blocks from the book, Algorithms for Decision Making. github.com  
+10:40 PM - algorithmsbooks/decisionmaking-code: All typeset code blocks from the book, Algorithms for Decision Making. github.com  
+10:40 PM - algorithmsbooks/decisionmaking-ancillaries: Ancillaries for Algorithms for Decision Making github.com  
+
+10:49 PM - Explanation of Decision-Making Algorithms I Sapien•s Al Glossary sapien.io  
+10:49 PM - Explanation of Real-Time Processing I Sapien•s Al Glossary sapien.io  
+10:49 PM - Sapien — Proof of Quality sapien.io  
+10:49 PM - Sapien•s Al Glossary of B-Terms I Concepts & Insights sapien.io  
+10:49 PM - Sapien•s Al Glossary of D-Terms I Concepts & Insights sapien.io  
+
+10:50 PM - (126) best desition making algorithum using weights adn penalty - YouTube youtube.com  
+10:51 PM - (125) How I Use A.I. to Make Decisions - YouTube youtube.com  
+10:51 PM - (125) How To Make Better Decisions I Andrew Huberman - YouTube youtube.com  
+10:51 PM - (125) How to take Better Decisions? 3 Tips - YouTube youtube.com  
+10:51 PM - (24) YouTube youtube.com  
+
+10:52 PM - Research Log Documentation chatgpt.com  
+10:52 PM - Vonnue/RESEARCH_LOG.md at main • Pranavdas-1/Vonnue github.com  
+10:52 PM - Editing Vonnue/RESEARCH_LOG.md at main • Pranavdas-1Nonnue github.com  
+
+10:53 PM - desition making algorithms - Google Search google.com  
+10:53 PM - best desition making algorithms for comapring - Google Search google.com  
+10:53 PM - Top 10 Machine Leaming Algorithms in 2026 - Analytics Vidhya analyticsvidhya.com  
+10:53 PM - Top 9 decision-making tools for better organizational decision-making 1000minds.com  
+10:53 PM - Which algorithm is more preferable for decision making using data mining? - Quora quora.com  
+10:53 PM - Algorithms for Decision Making algorithmsbook.com  
+10:53 PM - Algorithms Books algorithmsbookcom  
+10:53 PM - Algorithms for Decision Making algorithmsbook.com  
+10:53 PM - Algorithms for Decision Making algorithmsbookcom  
+10:53 PM - algorithmsbooks/decisionmaking-ancillaries: Ancillaries for Algorithms for Decision Making github.com  
+
+10:54 PM - griffinbholt/decisionmaking-code-py: Python versions of all typeset code blocks from the book, Algorithms for Decisi...  
+10:54 PM - decisionmaking-code-py/.github/workflows at main • griffinbholt/decisionmaking-code-py github.com  
+10:54 PM - decisionmaking-code-py/src at main • griffinbholt/decisionmaking-code-py github.com  
+10:54 PM - decisionmaking-code-py/src/ch22.py at main • griffinbholt/decisionmaking-code-py github.com  
+10:54 PM - decisionmaking-code-py/src/ch19.py at main • griffinbholt/decisionmaking-code-py github.com  
+
+11:25 PM - Decision Companion System Design chatgpt.com  
+
+---
+
+## AI Prompts Used
+
+
+For chosing a product from given data comparing each product by there feature which is better in real life snerio Multi-Criteria Decision Analysis (MCDA) coding or Analytic Hierarchy Process (AHP) or any other is better?
+
+any other way rather than AHP or MCDA if there eziat any better model
+
+My thinking is that if AHP is the best (correct me if im wrong) methond if input critiria is less than or eql to 8 after asking the user then use AHP model if more than 8 then use MCDA or TOPSIS model or maybe if a very vauge person want to buy then fuzzy logic
+
+For chosing a product from given data comparing each product by there feature which is better in real life snerio Multi-Criteria Decision Analysis (MCDA) coding or Analytic Hierarchy Process (AHP) or any other is better?
+
+what u mean by These are objective metrics. and why does AHP does not give strong advantage here. 2. what is Membership functions Linguistic variable mapping Defuzzification logic
+
+Compare MCDA vs TOPSIS specifically for your speaker dataset
+
+non monotonically attribute meand
+
+non monotonically attribute meand
+
+Write your exact TOPSIS scoring pipeline step-by-step Or show how to integrate battery cheating penalty mathematically Or design your explanation engine logic
+
+Convert this into Python-ready code
+
+where to start to undertnad the code
+
+def init(self, name: str, attributes: Dict[str, float], battery_test_volume: float = 80): ehy battery test volume is given 8 is it to set it as default
+
+def _build_matrix(self, speakers: List[Speaker]): matrix = [] for sp in speakers: row = [sp.attributes[c.name] for c in self.criteria] matrix.append(row) return np.array(matrix, dtype=float) explain its working with example
+
+def _normalize(self, matrix): norm = np.sqrt((matrix ** 2).sum(axis=0)) return matrix / norm
+
+def _ideal_solutions(self, weighted_matrix): ideal_best = [] ideal_worst = [] for j, c in enumerate(self.criteria): column = weighted_matrix[:, j] if c.criterion_type == "benefit": ideal_best.append(column.max()) ideal_worst.append(column.min()) else: # cost ideal_best.append(column.min()) ideal_worst.append(column.max()) return np.array(ideal_best), np.array(ideal_worst)
+
+def _distance(self, weighted_matrix, ideal_best, ideal_worst): dist_best = np.sqrt(((weighted_matrix - ideal_best) ** 2).sum(axis=1)) dist_worst = np.sqrt(((weighted_matrix - ideal_worst) ** 2).sum(axis=1)) return dist_best, dist_worst
+
+can i know info about a prosuct that at what colume its charging test is conducted or not
+
+also what about distortion it is not also available r8
+
+ao this two options need to be only given for extreme audiofiles who know data about it and for nomal users clear criteira shuld be given?
+
+
+---
+
+## What I Did
+
+- Studied open-source decision-making algorithm implementations.
+- Compared AHP, MCDA, TOPSIS, and fuzzy logic.
+- Explored when each model is appropriate.
+- Learned TOPSIS mathematical pipeline.
+- Converted conceptual model into Python-ready structure.
+- Asked detailed explanation of normalization, matrix building, ideal solutions, and distance calculation.
+- Researched how to integrate battery cheating penalty mathematically.
+- Evaluated explanation engine logic.
+- Investigated availability of battery test volume and distortion data.
+- Understood decision fatigue from Apna College video and reduced unnecessary criteria.
+- Finalized plan to build model using:
+  - Weighted MCDA
+  - Advanced structured weighted model
+  - Penalty engine
+
+---
+
+## Summary
+
+Day 5 focused on strengthening the mathematical foundation of the decision engine.  
+Shifted from high-level comparison (AHP vs MCDA) to implementation-level clarity using TOPSIS and structured weighted scoring.  
+Refined model selection strategy and simplified criteria to reduce decision fatigue while keeping the penalty-based architecture.
