@@ -202,7 +202,7 @@ The original development repository with early commit history was deleted during
 
 Current repositories:
 
-Main Application:  
+Earlier Application:  
 https://github.com/Pranavdas-1/Vonnue.1  
 
 Standalone TOPSIS Development (algorithm experimentation):  
