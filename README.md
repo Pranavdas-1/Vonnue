@@ -129,22 +129,6 @@ Deployed on Render:
 
 👉 https://vonnue.onrender.com/
 
-📁 Project Structure
-Vonnue.1/
-├── app/
-│   ├── __init__.py
-│   ├── config.py              # Criteria keys, types, labels
-│   ├── decision_engine.py     # TOPSIS algorithm
-│   ├── explanation_engine.py  # Deterministic explanation generator
-│   ├── preprocessing.py       # Form → structured Speaker conversion
-│   ├── main.py                # FastAPI routes
-│   ├── static/
-│   └── templates/
-│       ├── base_casual.html
-│       ├── casual_speakers.html
-│       ├── casual_weights.html
-│       └── casual_results.html
-└── requirements.txt
 🛠 Tech Stack
 Layer	Technology
 Backend	FastAPI
