@@ -36,7 +36,8 @@ Compare multiple speakers
 Assign importance to criteria
 Get deterministic, explainable rankings
 
-✨ Core Features
+## Core Features
+
 🔹 Multi-Speaker Comparison
 
 Add 2 or more speakers dynamically and compare them side-by-side.
