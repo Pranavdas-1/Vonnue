@@ -214,12 +214,40 @@ The current repository reflects the finalized structured implementation.
 
 ## 11. What I Would Improve With More Time
 
-- Replace in-memory session storage with persistent session management
-- Add structured product dataset import
-- Add visual decision contribution graphs
-- Implement preset decision profiles (Battery-focused, Party-focused, etc.)
-- Add confidence modeling for missing attributes
-- Improve commit history clarity (earlier repository deletion reduced traceability)
+With additional development time, I would extend the system in the following structured ways:
+
+- Replace in-memory session storage with persistent session management (Redis or database-backed sessions) for production reliability.
+
+- Reintroduce a dedicated **Audio Enthusiast mode** where advanced users can:
+  - Define custom criteria
+  - Adjust technical attributes (e.g., frequency range, codec support)
+  - Compare configurations with deeper control over evaluation logic.
+
+- Implement a controlled data ingestion pipeline:
+  - Structured product dataset import (CSV / JSON).
+  - Automated web scraping module for public product specifications.
+  - Earlier scraping attempts faced HTTP 403 restrictions, so this would require ethical scraping practices or official APIs.
+
+- Allow editable criteria:
+  - Enable users to add or remove evaluation criteria dynamically.
+  - Permit user-defined cost/benefit classification per criterion.
+
+- Support multiple decision models:
+  - Add alternative evaluation models such as Weighted Sum MCDA.
+  - Allow model selection based on user preference.
+  - Compare outputs between TOPSIS and simpler models for transparency.
+
+- Add visual contribution graphs:
+  - Display per-criterion contribution impact.
+  - Visualize distance from ideal best and worst.
+
+- Add confidence modeling for incomplete attributes:
+  - Handle missing data more formally.
+  - Show confidence scores alongside rankings.
+
+- Improve repository traceability:
+  - Provide a cleaner staged commit history.
+  - Maintain clearer version progression documentation.
 
 ---
 
