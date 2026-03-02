@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ title }}</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        /* ── Reset & Base ───────────────────────────────────── */
+        *,
+        *::before,
+        *::after {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', system-ui, -apple-system, sans-serif;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: linear-gradient(145deg, #fff7ed, #ffedd5, #ffffff);
+            color: #1c1917;
+        }
+
+        /* ── Card Container ─────────────────────────────────── */
+        .card {
+            width: 100%;
+            max-width: 460px;
+            padding: 3rem 2.5rem;
+            border-radius: 1.25rem;
+            background: #ffffff;
+            border: 1px solid #fed7aa;
+            box-shadow: 0 4px 24px rgba(251, 146, 60, 0.10),
+                0 1px 4px rgba(0, 0, 0, 0.04);
+            text-align: center;
+        }
+
+        /* ── Icon ───────────────────────────────────────────── */
+        .icon {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+
+        /* ── Typography ─────────────────────────────────────── */
+        h1 {
+            font-size: 1.55rem;
+            font-weight: 700;
+            letter-spacing: -0.02em;
+            margin-bottom: 0.35rem;
+            background: linear-gradient(135deg, #ea580c, #f97316, #fb923c);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .subtitle {
+            font-size: 0.95rem;
+            color: #78716c;
+            margin-bottom: 2.25rem;
+        }
+
+        /* ── Profile Buttons ────────────────────────────────── */
+        .modes {
+            display: flex;
+            flex-direction: column;
+            gap: 0.85rem;
+        }
+
+        .mode-btn {
+            position: relative;
+            display: flex;
+            align-items: center;
+            gap: 0.9rem;
+            width: 100%;
+            padding: 1rem 1.25rem;
+            background: #fffbf7;
+            border: 1px solid #fdba74;
+            border-radius: 0.75rem;
+            color: #292524;
+            font-family: inherit;
+            font-size: 0.95rem;
+            font-weight: 500;
+            cursor: pointer;
+            transition: all 0.2s ease;
+        }
+
+        .mode-btn:hover {
+            background: #fff7ed;
+            border-color: #f97316;
+            box-shadow: 0 2px 12px rgba(249, 115, 22, 0.15);
+            transform: translateY(-1px);
+        }
+
+        .mode-btn:active {
+            transform: translateY(0);
+        }
+
+        .mode-btn .emoji {
+            font-size: 1.35rem;
+            width: 2rem;
+            text-align: center;
+            flex-shrink: 0;
+        }
+
+        .mode-btn .label {
+            text-align: left;
+        }
+
+        .mode-btn .label span {
+            display: block;
+            font-size: 0.75rem;
+            font-weight: 400;
+            color: #a8a29e;
+            margin-top: 0.15rem;
+        }
+
+        .mode-btn .arrow {
+            margin-left: auto;
+            color: #d6d3d1;
+            transition: color 0.2s ease, transform 0.2s ease;
+        }
+
+        .mode-btn:hover .arrow {
+            color: #ea580c;
+            transform: translateX(2px);
+        }
+
+        /* ── Footer ─────────────────────────────────────────── */
+        .footer {
+            margin-top: 2rem;
+            font-size: 0.7rem;
+            color: #a8a29e;
+            letter-spacing: 0.04em;
+            text-transform: uppercase;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="card">
+        <div class="icon">🔊</div>
+        <h1>{{ title }}</h1>
+        <p class="subtitle">Select Your Profile</p>
+
+        <div class="modes">
+            <!-- Each button submits a hidden form to POST /set-mode -->
+
+            <form method="post" action="/set-mode">
+                <input type="hidden" name="mode" value="casual">
+                <button type="submit" class="mode-btn">
+                    <span class="emoji">🛒</span>
+                    <span class="label">
+                        Casual Buyer
+                        <span>Quick recommendations, minimal setup</span>
+                    </span>
+                    <span class="arrow">→</span>
+                </button>
+            </form>
+
+            <form method="post" action="/set-mode">
+                <input type="hidden" name="mode" value="enthusiast">
+                <button type="submit" class="mode-btn">
+                    <span class="emoji">🎧</span>
+                    <span class="label">
+                        Audio Enthusiast
+                        <span>Deep sound analysis, weighted criteria</span>
+                    </span>
+                    <span class="arrow">→</span>
+                </button>
+            </form>
+
+        </div>
+
+        <p class="footer">Vonnue · Speaker Decision Companion</p>
+    </div>
+</body>
+
+</html>

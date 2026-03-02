@@ -1,0 +1,191 @@
+{% extends "base_casual.html" %}
+
+{% block subtitle %}
+<p>Set the importance of each criterion for your comparison.</p>
+{% endblock %}
+
+{% block extra_css %}
+<style>
+    .weights-form {
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    .weight-card {
+        display: flex;
+        align-items: center;
+        gap: 1.25rem;
+        padding: 1rem 1.25rem;
+        background: #fff;
+        border: 1px solid #e7e5e4;
+        border-radius: 0.7rem;
+        transition: box-shadow 0.2s ease, border-color 0.2s ease;
+    }
+
+    .weight-card:hover {
+        border-color: #fdba74;
+        box-shadow: 0 2px 10px rgba(249, 115, 22, 0.08);
+    }
+
+    .weight-card .icon-dot {
+        width: 2.2rem;
+        height: 2.2rem;
+        border-radius: 0.5rem;
+        background: linear-gradient(135deg, #fff7ed, #ffedd5);
+        border: 1px solid #fed7aa;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 0.9rem;
+        flex-shrink: 0;
+    }
+
+    .weight-info {
+        flex: 1;
+    }
+
+    .weight-info .name {
+        font-size: 0.9rem;
+        font-weight: 600;
+        color: #292524;
+    }
+
+    .weight-info .desc {
+        font-size: 0.72rem;
+        color: #a8a29e;
+        margin-top: 0.1rem;
+    }
+
+    .weight-card select {
+        width: 200px;
+        flex-shrink: 0;
+    }
+
+    .weight-card .direction-select {
+        width: 170px;
+        flex-shrink: 0;
+        font-size: 0.82rem;
+    }
+
+    .weight-card .selects-group {
+        display: flex;
+        gap: 0.5rem;
+        align-items: center;
+        flex-shrink: 0;
+    }
+
+    .weight-legend {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0.6rem;
+        margin-bottom: 0.75rem;
+    }
+
+    .weight-legend span {
+        font-size: 0.72rem;
+        padding: 0.3rem 0.65rem;
+        background: #f5f5f4;
+        border-radius: 1rem;
+        color: #78716c;
+        font-weight: 500;
+    }
+
+    .weights-action {
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+        margin-top: 1.5rem;
+        padding-top: 1.5rem;
+        border-top: 1px solid #f5f5f4;
+    }
+
+    .weights-action .spacer {
+        flex: 1;
+    }
+</style>
+{% endblock %}
+
+{% block content %}
+<div class="weight-legend">
+    <span>1 = Not Important</span>
+    <span>2 = Slightly Important</span>
+    <span>3 = Important</span>
+    <span>4 = Very Important</span>
+    <span>5 = Extremely Important</span>
+</div>
+
+<form method="post" action="/casual/weights">
+    <div class="weights-form">
+        {% set icons = {
+        'price': '💰',
+        'physical_weight': '⚖️',
+        'clarity': '🔉',
+        'bass': '🎵',
+        'wattage': '📢',
+        'battery': '🔋',
+        'charging_wattage': '⚡',
+        'build': '🏗️',
+        'ip': '💧',
+        'bluetooth': '📶',
+        'multi_pair': '🔗',
+        'mic': '🎤',
+        'drivers': '🔈',
+        'app_support': '📱',
+        'warranty': '🛡️',
+        'brand_reliability': '⭐',
+        'stand_orientation': '🔄',
+        'battery_size': '🔋'
+        } %}
+
+        <!-- Charging Type Preference (separate from weighted criteria) -->
+        <div class="weight-card" style="border-color: #fdba74; background: #fffbf5;">
+            <div class="icon-dot">🔌</div>
+            <div class="weight-info">
+                <div class="name">Charging Type Preference</div>
+                <div class="desc">This is not weighted — it filters or penalises results</div>
+            </div>
+            <select name="charging_pref" class="direction-select" style="width: 200px;">
+                <option value="dont_care" selected>Don't Care</option>
+                <option value="prefer_usbc">Prefer USB-C</option>
+                <option value="must_usbc">Must Be USB-C</option>
+            </select>
+        </div>
+
+        {% for key in criteria_keys %}
+        <div class="weight-card">
+            <div class="icon-dot">{{ icons.get(key, '•') }}</div>
+            <div class="weight-info">
+                <div class="name">{{ criteria_labels[key] }}</div>
+                {% if key in direction_overridable %}
+                <div class="desc">Preference direction can be customised</div>
+                {% endif %}
+            </div>
+            <div class="selects-group">
+                <select name="weight_{{ key }}">
+                    <option value="1">1 — Not Important</option>
+                    <option value="2">2 — Slightly Important</option>
+                    <option value="3" selected>3 — Important</option>
+                    <option value="4">4 — Very Important</option>
+                    <option value="5">5 — Extremely Important</option>
+                </select>
+                {% if key in direction_overridable %}
+                <select name="direction_{{ key }}" class="direction-select">
+                    <option value="benefit" {% if criteria_types[key]=='benefit' %}selected{% endif %}>↑ Higher is
+                        Better</option>
+                    <option value="cost" {% if criteria_types[key]=='cost' %}selected{% endif %}>↓ Lower is Better
+                    </option>
+                </select>
+                {% endif %}
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+
+    <div class="weights-action">
+        <a href="/casual/speakers" class="btn-secondary">← Back to Speakers</a>
+        <span class="spacer"></span>
+        <button type="submit" class="btn-primary">Run Comparison →</button>
+    </div>
+</form>
+{% endblock %}

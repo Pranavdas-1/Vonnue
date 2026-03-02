@@ -1,0 +1,298 @@
+{% extends "base_mode.html" %}
+
+{% block subtitle %}
+<p>Add at least 2 speakers to compare. Fill in each speaker's specifications.</p>
+{% endblock %}
+
+{% block extra_css %}
+<style>
+    .speakers-container {
+        display: flex;
+        flex-direction: column;
+        gap: 1.5rem;
+    }
+
+    .speaker-card {
+        background: #fff;
+        border: 1px solid #e7e5e4;
+        border-radius: 0.85rem;
+        padding: 1.5rem;
+        box-shadow: 0 1px 4px rgba(0, 0, 0, 0.03);
+        transition: box-shadow 0.2s ease;
+        animation: slideIn 0.3s ease;
+    }
+
+    .speaker-card:hover {
+        box-shadow: 0 4px 16px rgba(0, 0, 0, 0.06);
+    }
+
+    @keyframes slideIn {
+        from {
+            opacity: 0;
+            transform: translateY(12px);
+        }
+
+        to {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+
+    .speaker-header {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-bottom: 1.25rem;
+        padding-bottom: 0.75rem;
+        border-bottom: 1px solid #f5f5f4;
+    }
+
+    .speaker-header h3 {
+        font-size: 1rem;
+        font-weight: 700;
+        color: #292524;
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+    }
+
+    .speaker-header h3 .num {
+        width: 1.6rem;
+        height: 1.6rem;
+        background: linear-gradient(135deg, #ea580c, #f97316);
+        color: #fff;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 0.72rem;
+        font-weight: 700;
+    }
+
+    .speaker-name-input {
+        margin-bottom: 1rem;
+    }
+
+    .speaker-name-input input {
+        font-size: 1rem;
+        font-weight: 600;
+        border: 1px dashed #d6d3d1;
+        background: #fafaf9;
+    }
+
+    .speaker-name-input input:focus {
+        border-style: solid;
+    }
+
+    .criteria-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+        gap: 1rem;
+    }
+
+    .field-group {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .field-group label .hint {
+        font-weight: 400;
+        color: #a8a29e;
+        font-size: 0.7rem;
+    }
+
+    .action-bar {
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+        margin-top: 1.5rem;
+        padding-top: 1.5rem;
+        border-top: 1px solid #f5f5f4;
+    }
+
+    .action-bar .spacer {
+        flex: 1;
+    }
+
+    .error-msg {
+        display: none;
+        padding: 0.7rem 1rem;
+        background: #fef2f2;
+        border: 1px solid #fecaca;
+        border-radius: 0.5rem;
+        color: #dc2626;
+        font-size: 0.85rem;
+        font-weight: 500;
+        margin-bottom: 1rem;
+    }
+
+    .error-msg.visible {
+        display: block;
+        animation: slideIn 0.2s ease;
+    }
+</style>
+{% endblock %}
+
+{% block content %}
+<form id="speakerForm" method="post" action="/{{ mode_name }}/speakers">
+    <input type="hidden" name="speaker_count" id="speakerCount" value="2">
+
+    <div id="errorMsg" class="error-msg">Please add at least 2 speakers.</div>
+
+    <div class="speakers-container" id="speakersContainer">
+        <!-- Speaker cards inserted by JS -->
+    </div>
+
+    <div class="action-bar">
+        <button type="button" class="btn-secondary" id="addSpeakerBtn">
+            ＋ Add Speaker
+        </button>
+        <span class="spacer"></span>
+        <button type="submit" class="btn-primary">
+            Continue to Weights →
+        </button>
+    </div>
+</form>
+{% endblock %}
+
+{% block extra_js %}
+<script>
+    // Field definitions passed from Python
+    const fieldTypes = {{ field_types | tojson }};
+    const criteriaKeys = {{ criteria_keys | tojson }};
+    const criteriaLabels = {{ criteria_labels | tojson }};
+    const optionalFields = {{ optional_fields | tojson }};
+    const chargingOptions = {{ charging_type_options | tojson }};
+
+    let speakerCount = 0;
+
+    function makeSelect(name, options) {
+        let html = `<select name="${name}" required>`;
+        for (const label of options) {
+            html += `<option value="${label}">${label}</option>`;
+        }
+        html += `</select>`;
+        return html;
+    }
+
+    function makeField(key, idx) {
+        const ft = fieldTypes[key];
+        const label = criteriaLabels[key] || key;
+        const isOptional = optionalFields.includes(key);
+        const reqAttr = isOptional ? '' : 'required';
+        const hint = isOptional ? ' <span class="hint">(optional)</span>' : '';
+
+        if (typeof ft === 'object' && ft.select) {
+            const opts = Object.keys(ft.select);
+            return `<div class="field-group">
+                <label>${label}${hint}</label>
+                ${makeSelect(`${key}_${idx}`, opts)}
+            </div>`;
+        }
+
+        // numeric or text
+        const inputType = (ft === 'numeric') ? 'number' : 'text';
+        const step = (ft === 'numeric') ? 'any' : '';
+        return `<div class="field-group">
+            <label>${label}${hint}</label>
+            <input type="${inputType}" name="${key}_${idx}" ${step ? `step="${step}"` : ''} ${reqAttr}>
+        </div>`;
+    }
+
+    function addSpeaker() {
+        const i = speakerCount;
+        const card = document.createElement('div');
+        card.className = 'speaker-card';
+        card.id = `speaker-card-${i}`;
+
+        // Build criteria fields
+        let fieldsHtml = '';
+        for (const key of criteriaKeys) {
+            fieldsHtml += makeField(key, i);
+        }
+
+        // Always add charging type (not a TOPSIS criterion, but needed for filter/penalty)
+        fieldsHtml += `<div class="field-group">
+            <label>Charging Type</label>
+            ${makeSelect(`charging_type_${i}`, chargingOptions)}
+        </div>`;
+
+        card.innerHTML = `
+            <div class="speaker-header">
+                <h3><span class="num">${i + 1}</span> Speaker ${i + 1}</h3>
+                ${i >= 2 ? `<button type="button" class="btn-danger" onclick="removeSpeaker(${i})">✕ Remove</button>` : ''}
+            </div>
+            <div class="speaker-name-input">
+                <label for="name_${i}">Speaker Name</label>
+                <input type="text" name="name_${i}" id="name_${i}" placeholder="e.g. JBL Flip 6" required>
+            </div>
+            <div class="criteria-grid">
+                ${fieldsHtml}
+            </div>
+        `;
+        document.getElementById('speakersContainer').appendChild(card);
+        speakerCount++;
+        document.getElementById('speakerCount').value = speakerCount;
+    }
+
+    function removeSpeaker(index) {
+        const card = document.getElementById(`speaker-card-${index}`);
+        if (card) {
+            card.style.animation = 'slideIn 0.2s ease reverse';
+            setTimeout(() => {
+                card.remove();
+                reindexSpeakers();
+            }, 180);
+        }
+    }
+
+    function reindexSpeakers() {
+        const cards = document.querySelectorAll('.speaker-card');
+        speakerCount = 0;
+        cards.forEach((card, newIdx) => {
+            card.id = `speaker-card-${newIdx}`;
+            const numSpan = card.querySelector('.speaker-header .num');
+            if (numSpan) numSpan.textContent = newIdx + 1;
+            const h3 = card.querySelector('.speaker-header h3');
+            if (h3) {
+                const numEl = h3.querySelector('.num');
+                h3.textContent = '';
+                if (numEl) { numEl.textContent = newIdx + 1; h3.appendChild(numEl); }
+                h3.append(` Speaker ${newIdx + 1}`);
+            }
+            const removeBtn = card.querySelector('.btn-danger');
+            if (removeBtn) {
+                if (newIdx < 2) removeBtn.remove();
+                else removeBtn.setAttribute('onclick', `removeSpeaker(${newIdx})`);
+            }
+            card.querySelectorAll('input, select').forEach(el => {
+                const name = el.getAttribute('name');
+                if (name) { el.setAttribute('name', name.replace(/_\d+$/, '') + `_${newIdx}`); }
+                const id = el.getAttribute('id');
+                if (id) { el.setAttribute('id', id.replace(/_\d+$/, '') + `_${newIdx}`); }
+            });
+            card.querySelectorAll('label').forEach(lbl => {
+                const forAttr = lbl.getAttribute('for');
+                if (forAttr) { lbl.setAttribute('for', forAttr.replace(/_\d+$/, '') + `_${newIdx}`); }
+            });
+            speakerCount++;
+        });
+        document.getElementById('speakerCount').value = speakerCount;
+    }
+
+    document.getElementById('speakerForm').addEventListener('submit', function (e) {
+        const cards = document.querySelectorAll('.speaker-card');
+        if (cards.length < 2) {
+            e.preventDefault();
+            const err = document.getElementById('errorMsg');
+            err.classList.add('visible');
+            setTimeout(() => err.classList.remove('visible'), 3000);
+        }
+    });
+    document.getElementById('addSpeakerBtn').addEventListener('click', addSpeaker);
+
+    // Start with 2 speakers
+    addSpeaker();
+    addSpeaker();
+</script>
+{% endblock %}
