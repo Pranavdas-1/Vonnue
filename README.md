@@ -1,6 +1,6 @@
 # Vonnue — Speaker Decision Companion
 
-Vonnue is a deterministic web-based Decision Companion System for ranking Bluetooth / portable speakers using the TOPSIS (Technique for Order of Preference by Similarity to Ideal Solution) multi-criteria decision algorithm.
+This is a deterministic web-based Decision Companion System for ranking Bluetooth / portable speakers using the TOPSIS (Technique for Order of Preference by Similarity to Ideal Solution) multi-criteria decision algorithm.
 
 The system compares multiple speakers across structured, weighted criteria and produces an objective, explainable ranking.
 
