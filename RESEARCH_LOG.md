@@ -1,6 +1,6 @@
   
 # RESEARCH_LOG.md
-
+All Antigravity promt can be view from : https://docs.google.com/document/d/1LVbp9s9bXHDU0O799h4x1j7rRne63NU5jmXidya8z3o/edit?usp=sharing
 ---
 
 # Day 1 — 21/02/2026
