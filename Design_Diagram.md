@@ -107,77 +107,78 @@ Render Results Page
 
 Let:
 
-- \( X \) = Decision Matrix  
-- \( w \) = Weight Vector  
-- \( v \) = Weighted Normalized Matrix  
+- X = Decision Matrix  
+- w = Weight Vector  
+- v = Weighted Normalized Matrix  
 
 ---
 
 ### Step 1 — Normalize
 
-\[
-r_{ij} = \frac{x_{ij}}{\sqrt{\sum x_{ij}^2}}
-\]
+Vector normalization is applied column-wise:
+
+r_ij = x_ij / sqrt( Σ (x_ij²) )
+
+Where:
+- r_ij = normalized value  
+- x_ij = original value  
+- Denominator = square root of sum of squares of that column  
 
 ---
 
 ### Step 2 — Apply Weights
 
-\[
-v_{ij} = w_j \cdot r_{ij}
-\]
+v_ij = w_j × r_ij
+
+Each normalized column is multiplied by its corresponding weight.
 
 ---
 
 ### Step 3 — Identify Ideal Solutions
 
-For Benefit Criteria:
+For Benefit Criteria (higher is better):
 
-\[
-A^+ = \max(v_{ij})
-\]
+A⁺ = max(v_ij)  
+A⁻ = min(v_ij)
 
-\[
-A^- = \min(v_{ij})
-\]
+For Cost Criteria (lower is better):
 
-For Cost Criteria:
+A⁺ = min(v_ij)  
+A⁻ = max(v_ij)
 
-\[
-A^+ = \min(v_{ij})
-\]
-
-\[
-A^- = \max(v_{ij})
-\]
+A⁺ = Ideal Best  
+A⁻ = Ideal Worst  
 
 ---
 
 ### Step 4 — Compute Distances
 
-\[
-D_i^+ = \sqrt{\sum (v_{ij} - A^+)^2}
-\]
+Distance from Ideal Best:
 
-\[
-D_i^- = \sqrt{\sum (v_{ij} - A^-)^2}
-\]
+D_i⁺ = sqrt( Σ (v_ij − A⁺)² )
+
+Distance from Ideal Worst:
+
+D_i⁻ = sqrt( Σ (v_ij − A⁻)² )
 
 ---
 
 ### Step 5 — Closeness Coefficient
 
-\[
-C_i = \frac{D_i^-}{D_i^+ + D_i^-}
-\]
+C_i = D_i⁻ / (D_i⁺ + D_i⁻)
+
+Where:
+
+- Higher C_i means closer to ideal best  
+- 0 ≤ C_i ≤ 1  
 
 ---
 
 ### Step 6 — Apply Penalty Model
 
-\[
-FinalScore = C_i \times BatteryFactor \times BrandFactor \times DegradationFactor
-\]
+FinalScore = C_i × BatteryFactor × BrandFactor × DegradationFactor
+
+Penalty multipliers are applied **after** TOPSIS scoring to preserve matrix integrity.
 
 ---
 
