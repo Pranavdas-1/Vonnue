@@ -1,131 +1,139 @@
   
+# RESEARCH_LOG.md
+
+---
+
 # Day 1 — 21/02/2026
 
 ## Objective
+
 Inferred Objective: To understand what the assignment expects and how to start.
 
 ---
 
 ## AI Prompt Used
 
-1. Congratulations on being shortlisted from the programming test conducted at your college.
+Congratulations on being shortlisted from the programming test conducted at your college.
 
 As the next step in our evaluation process, we would like you to complete a take-home assignment. This round is intentionally different from a traditional coding test.
 
 You are allowed to use any resources - AI tools (ChatGPT, Copilot, etc.), Google, Stack Overflow, documentation, books, or any other reference material.
 
-We are not only evaluating the final solution.
-As our CEO puts it:
+We are not only evaluating the final solution. As our CEO puts it:
 
 “We want to see how you build.”
+
 This assignment is designed to evaluate:
-How clearly you document your thinking
-How you approach ambiguous problems
-Your system design and architectural decisions
-How you leverage tools (including AI)
-Your transparency in the build process
+- How clearly you document your thinking  
+- How you approach ambiguous problems  
+- Your system design and architectural decisions  
+- How you leverage tools (including AI)  
+- Your transparency in the build process  
 
-Problem Statement:
+### Problem Statement
+
 Design and build a “Decision Companion System” that helps a user make better decisions.
-The system should assist a user in evaluating options for a real-world decision of their choice.
-Your system must work without relying entirely on an AI model. If AI is used, clearly justify its role and limitations.
-Examples (you are NOT limited to these):
-Choosing a laptop under a budget
-Selecting the best candidate for a job role
-Deciding where to travel within constraints
-Picking an investment strategy
-Choosing a tech stack for a startup
 
-Core Expectations:
+The system should assist a user in evaluating options for a real-world decision of their choice.
+
+Your system must work without relying entirely on an AI model. If AI is used, clearly justify its role and limitations.
+
+Examples (you are NOT limited to these):
+- Choosing a laptop under a budget  
+- Selecting the best candidate for a job role  
+- Deciding where to travel within constraints  
+- Picking an investment strategy  
+- Choosing a tech stack for a startup  
+
+### Core Expectations
+
 Your system must:
-Accept multiple options
-Accept criteria (which may have different weights or importance)
-Process and evaluate options against criteria
-Provide a ranked recommendation
-Explain why a particular recommendation was made
+- Accept multiple options  
+- Accept criteria (which may have different weights or importance)  
+- Process and evaluate options against criteria  
+- Provide a ranked recommendation  
+- Explain why a particular recommendation was made  
+
 Beyond this, the design is up to you.
 
 You may choose:
+- CLI / Web App / API / Desktop tool  
+- Any programming language  
+- Any framework  
+- Simple or advanced logic  
 
-CLI / Web App / API / Desktop tool
-Any programming language
-Any framework
-Simple or advanced logic
 You define the depth. We are more interested in your thinking than feature count.
 
-Constraints
-The system should not be a static hard coded comparison.
-The user should be able to change inputs and get different outcomes.
-Your logic should be explainable (not a black box).
+### Constraints
 
-Deliverables
+- The system should not be a static hard coded comparison.  
+- The user should be able to change inputs and get different outcomes.  
+- Your logic should be explainable (not a black box).  
+
+### Deliverables
+
 Please submit a Git repository containing:
 
-1. Source Code
-Clean, readable, and structured
+**Source Code**
+- Clean, readable, and structured  
+- Meaningful commit history  
 
-Meaningful commit history
+**README.md** must include:
+- Your understanding of the problem  
+- Assumptions made  
+- Why you structured the solution the way you did  
+- Design decisions and trade-offs  
+- Edge cases considered  
+- How to run the project  
+- What you would improve with more time  
 
-2. README.md
-Include:
-
-Your understanding of the problem
-
-Assumptions made
-
-Why you structured the solution the way you did
-
-Design decisions and trade-offs
-
-Edge cases considered
-
-How to run the project
-
-What you would improve with more time
-
-3. Design Diagram
+**Design Diagram**  
 Provide at least one:
-Architecture diagram
-Data flow diagram
-Component diagram
-Or decision logic diagram
+- Architecture diagram  
+- Data flow diagram  
+- Component diagram  
+- Or decision logic diagram  
 
-4. BUILD_PROCESS.md
+**BUILD_PROCESS.md**
 Explain:
-How you started
-How your thinking evolved
-Alternative approaches considered
-Refactoring decisions
-Mistakes and corrections
-What changed during development and why
+- How you started  
+- How your thinking evolved  
+- Alternative approaches considered  
+- Refactoring decisions  
+- Mistakes and corrections  
+- What changed during development and why  
 
-5. RESEARCH_LOG.md
+**RESEARCH_LOG.md**
 Include:
-All AI prompts used
-All search queries (including Google searches)
-References that influenced your approach
-What you accepted, rejected, or modified from AI outputs
-We are not judging you for using AI.
+- All AI prompts used  
+- All search queries (including Google searches)  
+- References that influenced your approach  
+- What you accepted, rejected, or modified from AI outputs  
+
+We are not judging you for using AI.  
 We are evaluating how effectively and responsibly you use it.
 
-Evaluation Criteria
+### Evaluation Criteria
+
 You will be evaluated on:
-Clarity of thinking
-Problem structuring ability
-Quality of documentation
-Transparency in build process
-Design maturity
-Practical reasoning
-Code quality
+- Clarity of thinking  
+- Problem structuring ability  
+- Quality of documentation  
+- Transparency in build process  
+- Design maturity  
+- Practical reasoning  
+- Code quality  
 
-Timeline
-Submission deadline: On or before 02 March, 2026
+### Timeline
 
-We will be hosting a Google Meet on 21st February at 12:00 PM to address all your queries. Meanwhile if you have any other questions, please feel free to reach out to us via email.
+Submission deadline: On or before 02 March, 2026.
+
+We will be hosting a Google Meet on 21st February at 12:00 PM to address all your queries. Meanwhile, if you have any other questions, please feel free to reach out via email.
 
 We are looking forward to seeing how you build.
-what do they expect and what to do how to start
 
+Final Question Asked:
+"What do they expect and what to do how to start"
 
 ---
 
@@ -143,17 +151,41 @@ what do they expect and what to do how to start
 - Clarified my doubts through discussion.
 - From that conversation, learned about the AKINATOR concept.
 
+---
+
+## References That Influenced My Thinking
+
+- Assignment mail itself (primary reference)
+- Initial ChatGPT interpretation of expectations
+- Peer discussion (Christo Jose, Jithu Girish)
+- Concept of Akinator-style decision systems
 
 ---
 
+## What I Accepted / Rejected / Modified
 
+Accepted:
+- The assignment prioritizes process documentation over feature complexity.
+- The system must be explainable and deterministic.
+- Transparency in AI usage is critical.
+
+Rejected:
+- Building a simple static comparison tool.
+- Relying fully on AI for decision logic.
+
+Modified:
+- Shifted initial thought from simple rule-based logic toward a structured decision-making framework.
+
+---
 
 ## Impact on System Design
 
-- Helped me understand how to begin the assignment.
+This stage helped establish:
 
----
-
+- The need for a structured decision-support system.
+- The importance of documenting evolution.
+- The requirement for deterministic and explainable ranking logic.
+- The need to treat AI as an assistant, not as the decision engine.
 
 # Day 2 22/02/2026
 
@@ -206,9 +238,10 @@ To improve documentation structure and control how research and build data are s
 - Explored Akinator-based guessing/decision algorithms.
 - Looked into ambiguous problem concepts.
 
-# Day 3 23/02/2026
+# Day 3 — 23/02/2026
 
 ## Objective
+
 To research multi-criteria decision-making methods and generate the full Speaker Decision Companion System using AntiGravity.
 
 ---
@@ -240,14 +273,11 @@ To research multi-criteria decision-making methods and generate the full Speaker
 
 ## AI Prompt Used (for AntiGravity Prompt Generation)
 
-
 give me the best promt to say to anti gravity to develop the project it should be minimal my idea is a comanion app for chosing best speaker on market based on criterias such as 1. priority 2. comapny 3. clarity 4. distortion at max vaolume , 5 look 6 size 7 how it can be standed portrit or landed 8 heavyneess 9 batter backup 10 som companyy record battery while plaing on only 50 to 60 persentage volue thats kind of cheting so priority to that as well 11 so product after 6 8 month become less clariy eg voat , multi paring 15 bass 16 accesory additional 17 ip rating 18 charing type and how fat the charge 20 watt 21 no,. of speaker 22durability, and bluthooth version and app support use weight and AHP Analytic Hierarchy Process or rulw based as prefasred and penalty i will all data s
-
 
 ---
 
 ## Prompt Used in AntiGravity
-
 
 Build a minimal but well-structured web application called:
 
@@ -264,9 +294,8 @@ The decision logic must be deterministic and explainable.
 
 Use either:
 
-Weighted Scoring Model + Normalization
-OR
-
+Weighted Scoring Model + Normalization  
+OR  
 Analytic Hierarchy Process (AHP)
 
 Include rule-based penalty system for misleading specifications (e.g., battery claimed at 50–60% volume).
@@ -275,172 +304,193 @@ Architecture must be modular and clean.
 
 Keep UI minimal and functional (no heavy design).
 
-CORE FEATURES
+### CORE FEATURES
 
 The system must:
 
-• Accept multiple speaker options
-• Allow user-defined weights for each criterion
-• Normalize numeric values
-• Support benefit and cost criteria
-• Apply penalties where applicable
-• Rank speakers
-• Generate explanation for ranking
+• Accept multiple speaker options  
+• Allow user-defined weights for each criterion  
+• Normalize numeric values  
+• Support benefit and cost criteria  
+• Apply penalties where applicable  
+• Rank speakers  
+• Generate explanation for ranking  
 
-CRITERIA TO INCLUDE
+### CRITERIA TO INCLUDE
 
-Brand priority
+Brand priority  
+Sound clarity  
+Distortion at max volume (cost criterion)  
+Look / aesthetics  
+Size  
+Orientation support (portrait / landscape / both)  
+Heaviness (cost criterion)  
+Battery backup (actual tested hours preferred)  
+Penalty if battery claim based on 50–60% volume  
+Long-term clarity degradation risk (brand reliability penalty)  
+Multi-pairing support  
+Bass quality  
+Accessories included  
+IP rating  
+Charging type (USB-C preferred)  
+Charging wattage (faster charging = benefit)  
+Number of drivers/speakers  
+Durability build quality  
+Bluetooth version  
+App support availability  
 
-Sound clarity
-
-Distortion at max volume (cost criterion)
-
-Look / aesthetics
-
-Size
-
-Orientation support (portrait / landscape / both)
-
-Heaviness (cost criterion)
-
-Battery backup (actual tested hours preferred)
-
-Penalty if battery claim based on 50–60% volume
-
-Long-term clarity degradation risk (brand reliability penalty)
-
-Multi-pairing support
-
-Bass quality
-
-Accessories included
-
-IP rating
-
-Charging type (USB-C preferred)
-
-Charging wattage (faster charging = benefit)
-
-Number of drivers/speakers
-
-Durability build quality
-
-Bluetooth version
-
-App support availability
-
-SCORING LOGIC
+### SCORING LOGIC
 
 Implement:
 
-Step 1: Normalize numeric attributes (0–1 scale)
-Step 2: Apply weight multipliers
-Step 3: Subtract penalties
-Step 4: Calculate final score
-Step 5: Rank descending
+Step 1: Normalize numeric attributes (0–1 scale)  
+Step 2: Apply weight multipliers  
+Step 3: Subtract penalties  
+Step 4: Calculate final score  
+Step 5: Rank descending  
 
 If using AHP:
 
-Create pairwise comparison matrix
+Create pairwise comparison matrix  
+Compute consistency ratio  
+Derive weights  
+Then score speakers accordingly  
 
-Compute consistency ratio
-
-Derive weights
-
-Then score speakers accordingly
-
-PENALTY SYSTEM
+### PENALTY SYSTEM
 
 Examples:
 
-If battery tested only at 50–60% volume → -X% penalty
-
-Known clarity drop after 6–8 months → reliability penalty
-
-Older Bluetooth version (<5.0) → penalty
-
-Micro-USB charging → penalty
+If battery tested only at 50–60% volume → -X% penalty  
+Known clarity drop after 6–8 months → reliability penalty  
+Older Bluetooth version (<5.0) → penalty  
+Micro-USB charging → penalty  
 
 Penalties must be configurable.
 
-OUTPUT
+### OUTPUT
 
 For each speaker show:
 
-Final Score
-
-Weighted breakdown
-
-Penalty breakdown
-
-Top influencing criteria
-
-Why it ranked at that position
+Final Score  
+Weighted breakdown  
+Penalty breakdown  
+Top influencing criteria  
+Why it ranked at that position  
 
 Explanation must be rule-based, not AI-generated.
 
-TECH STACK
+### TECH STACK
 
 Keep minimal:
 
-Backend: Python (FastAPI)
-Frontend: Simple HTML + minimal CSS OR CLI version
-No database required (JSON input is enough)
+Backend: Python (FastAPI)  
+Frontend: Simple HTML + minimal CSS OR CLI version  
+No database required (JSON input is enough)  
 
-ARCHITECTURE
+### ARCHITECTURE
 
 Separate modules:
 
-models.py
+models.py  
+scoring_engine.py  
+normalization.py  
+penalty_engine.py  
+ahp_module.py (if AHP used)  
+explanation_engine.py  
+main.py  
 
-scoring_engine.py
+### NON-FUNCTIONAL REQUIREMENTS
 
-normalization.py
+Clean, readable code  
+Modular structure  
+Easily extendable criteria  
+No hardcoded speaker comparison  
+Input must be dynamic  
 
-penalty_engine.py
+### DELIVERABLE STRUCTURE
 
-ahp_module.py (if AHP used)
+decision-companion/  
+│  
+├── app/  
+├── README.md  
+├── DESIGN.md  
+└── requirements.txt  
 
-explanation_engine.py
-
-main.py
-
-NON-FUNCTIONAL REQUIREMENTS
-
-Clean, readable code
-
-Modular structure
-
-Easily extendable criteria
-
-No hardcoded speaker comparison
-
-Input must be dynamic
-
-DELIVERABLE STRUCTURE
-
-decision-companion/
-│
-├── app/
-├── README.md
-├── DESIGN.md
-└── requirements.txt
-
-Keep the project minimal but architecturally strong.
+Keep the project minimal but architecturally strong.  
 Focus on decision logic clarity over UI design.
-
 
 ---
 
 ## What I Did
 
-- Researched Weighted Scoring Model, MCDA, Normalization, Rule-based scoring system and AHP.
+- Researched Weighted Scoring Model, MCDA, Normalization, rule-based scoring systems, and AHP.
 - Watched multiple YouTube videos on decision-making algorithms.
-- Downloaded AntiGravity.
+- Explored differences between heuristic rule systems and structured MCDA models.
+- Downloaded and installed AntiGravity.
 - Generated a full speaker decision-making application using the structured prompt.
-- Copied ChatGPT’s generated response and executed it in AntiGravity to build the app.
+- Copied ChatGPT’s generated response and executed it in AntiGravity to build the application.
 
 ---
+
+## References That Influenced My Approach
+
+- YouTube explanations of Weighted Scoring and MCDA
+- AHP tutorials and implementation walkthroughs
+- Normalization and standardization tutorials
+- Assignment reference video ("We Want to See How You Build")
+- ChatGPT’s structured architectural recommendations
+
+---
+
+## What I Accepted / Rejected / Modified
+
+Accepted:
+- Deterministic ranking over AI-based ranking.
+- Modular architecture with separate scoring and penalty layers.
+- Explicit cost vs benefit handling.
+- Normalization before weight application.
+
+Rejected:
+- Pure rule-based decision trees (not scalable).
+- Fully AI-driven ranking logic.
+- Hardcoded speaker comparisons.
+
+Modified:
+- Considered AHP initially but leaned toward Weighted Scoring + Normalization due to scalability.
+- Structured penalties as configurable rather than fixed.
+- Emphasized explanation engine clarity over UI complexity.
+
+---
+
+## Impact on System Design
+
+Day 3 was a major architectural turning point.
+
+The system evolved from:
+- Conceptual idea inspired by Akinator-style logic
+
+To:
+- A structured, mathematically grounded multi-criteria decision system.
+
+This day established:
+- Deterministic scoring philosophy
+- Penalty-based adjustment modeling
+- Modular architecture blueprint
+- Clear separation between logic and UI
+- Avoidance of AI-based black-box ranking
+
+---
+
+## Summary
+
+Day 3 focused on transitioning from conceptual exploration to structured algorithmic design.
+
+Key outcomes:
+- Formal adoption of weighted MCDA-style modeling.
+- Evaluation of AHP as an optional advanced approach.
+- Strong emphasis on normalization and explainability.
+- Generation of the first complete system architecture using AntiGravity.
+
 # Day 4 24/02/2026
 
 ## Objective
@@ -531,6 +581,7 @@ Is this a good idea is it allowed
 - Evaluated legality of scraping and API usage.
 - Investigated integration of AI for structuring scraped data.
 - Researched Python setup (venv, BeautifulSoup, dictionary usage).
+
 
 
 # Day 5 — 27/02/2026
@@ -656,7 +707,8 @@ Refined model selection strategy and simplified criteria to reduce decision fati
 # Day 6 — 28/02/2026
 
 ## Objective
-To finalize feature selection, refine user segmentation (Casual / Enthusiast / Technical), and integrate existing TOPSIS logic into the AntiGravity-based web application.
+
+To finalize feature selection, refine user segmentation (Casual / Enthusiast / Technical), and integrate the existing TOPSIS logic into the AntiGravity-based web application.
 
 ---
 
@@ -681,7 +733,6 @@ To finalize feature selection, refine user segmentation (Casual / Enthusiast / T
 ---
 
 ## AI Prompts Used
-
 
 Bluetooth Version – Indicates range, connection stability, and energy efficiency. Newer versions (e.g., 5.x) generally offer longer range and better performance. Audio Output Power (Watts) – Higher watts typically means louder sound capability and better handling of larger spaces. Driver Configuration & Size – Number and size of drivers affects sound quality, especially bass and clarity. Larger drivers usually provide deeper bass. Frequency Response / Range (Hz) – Shows the spectrum the speaker can reproduce (e.g., 60 Hz–20 kHz). Wider ranges can mean richer audio. Battery Life (Hours) – Measured in continuous playback hours on a full charge. Crucial for portability and outdoor use. IP / Water & Dust Resistance Rating – Shows durability: IPX7 (waterproof), IP68 (dust/water protection), etc. Important for outdoor/active use. Physical Dimensions & Weight – Helps judge portability and where you can use the speaker (travel vs. home). Connectivity & Extras – Aux input, USB charging port, microphone, stereo pairing (TWS), multi-speaker linkage, smart assistants. Bluetooth Codecs Supported (SBC, AAC, aptX, LDAC) – This affects audio quality; advanced codecs like aptX or LDAC can deliver better fidelity. Build Quality & Feature Add-Ons – Materials, ruggedness, strap/handle design, app support, customizable EQ, party lights, etc. alao get picky from this fo r normal users
 
@@ -721,47 +772,104 @@ amoung thia which one is best for coding project assiastance
 ## What I Did
 
 - Finalized core technical criteria for speaker comparison.
-- Filtered and simplified criteria for normal users.
-- Decided to segment users into:
+- Evaluated which criteria should be simplified for normal users.
+- Introduced user segmentation:
   - Casual buyer
   - Audio enthusiast
   - Technical evaluator
 - Designed landing page logic for user-type selection.
-- Structured Casual Mode weight system using qualitative labels (Bad / Good / Top).
-- Designed separate weight-adjustment page for easier tuning.
-- Defined input logic for:
-  - IP rating (extract last two digits)
-  - Charging type
-  - Watt
-  - Number of speakers
-- Attached existing TOPSIS code:
+- Structured Casual Mode weight system using qualitative labels (Bad / Good / Top) instead of raw numeric weights.
+- Designed a separate weight-adjustment page for better usability and clarity.
+- Defined specific input transformation logic:
+  - Extracting numeric strength from IP rating (last two characters).
+  - Parsing charging type.
+  - Handling wattage and number of drivers.
+- Integrated existing TOPSIS implementation:
   - decision_engine.py
   - explanation_engine.py
   - main.py
-- Planned integration of existing TOPSIS implementation into AntiGravity app.
-- Adjusted logic requirements based on UI flow and weight separation.
-- Asked for the top 10 readily available specifications to compare 4 Bluetooth speakers.
-- Compared multiple AI coding assistants (Gemini 3.1 variants, Claude 4.6 variants, GPT-OSS 120B) to evaluate which is best suited for coding project assistance.
+- Planned modular integration between AntiGravity-generated frontend and custom TOPSIS backend.
+- Requested standardized top specifications for comparing 4 Bluetooth speakers.
+- Compared multiple AI coding assistants to evaluate suitability for structured project development.
+
+---
+
+## References That Influenced My Approach
+
+- Glitchfix TOPSIS-Python implementation.
+- YouTube TOPSIS pipeline breakdown tutorials.
+- NumPy documentation (installation and usage).
+- ChatGPT for structured UI-to-backend integration guidance.
+- Bluetooth speaker comparison resources.
+
+---
+
+## What I Accepted / Rejected / Modified
+
+Accepted:
+- Reuse of existing TOPSIS mathematical core.
+- Segmented UI flow to reduce decision fatigue.
+- Separate weight configuration page for usability.
+- Structured criteria grouping by user type.
+
+Rejected:
+- Overloading casual users with full technical audio metrics.
+- Mixing UI logic directly inside scoring engine.
+- Hardcoding criteria transformations inside templates.
+
+Modified:
+- Converted numeric weight-only system to qualitative weight UI mapping.
+- Added parsing logic (e.g., IP rating extraction).
+- Integrated deterministic engine into a multi-page web flow.
+- Simplified enthusiast/technical complexity for phased development.
+
+---
+
+## Impact on System Design
+
+Day 6 marked the transition from algorithm-focused development to full application structuring.
+
+The system evolved into:
+
+- A multi-page FastAPI web application.
+- Role-based user segmentation.
+- Modular integration between UI and deterministic scoring engine.
+- Clear separation of:
+  - Input collection
+  - Preprocessing
+  - Scoring
+  - Explanation generation
+  - Result rendering
+
+It also strengthened:
+
+- Usability thinking (reducing decision fatigue).
+- Maintainability through modular code separation.
+- Adaptability for future advanced user modes.
 
 ---
 
 ## Summary
 
-Day 6 focused on converting the mathematical TOPSIS engine into a structured multi-page web application.  
-User segmentation was introduced to reduce decision fatigue.  
-Criteria were simplified for Casual Mode while retaining structured weighted scoring.  
-Existing TOPSIS backend was prepared for integration with AntiGravity-generated frontend.  
-Additionally, expanded research included identifying standardized speaker comparison specs and evaluating AI coding assistants for development support.
+Day 6 focused on transforming the mathematically validated TOPSIS engine into a structured, user-facing web application.
+
+Key outcomes:
+
+- User segmentation introduced.
+- Casual Mode simplified while retaining structured scoring.
+- Backend TOPSIS logic integrated into AntiGravity-generated frontend.
+- Criteria standardization improved.
+- AI assistant evaluation conducted for coding support optimization.
 
 # Day 7 — 01/03/2026
 
 ## Objective
-To refine criteria, improve TOPSIS handling, adjust attribute direction control, validate generated FastAPI structure, and simplify system modes.
+
+To refine criteria selection, improve TOPSIS attribute handling, adjust attribute direction control, validate the generated FastAPI structure, and simplify overall system modes.
 
 ---
 
 ## AI Prompts Used
-
 
 missing thinds are mic,weigh , main thing missing is price bass should be in scale battery size as optional add battery tested louadness make it optional now i already given the past promt to antigravity so give promt to only change what i said now add option freequency range for audio files just said to remember
 
@@ -771,51 +879,48 @@ for some user they want product which has more weight so let it be controlled by
 
 Charging Type Charging Type should be C type or not and cannot be weighted as Not Important Slightly Important Important Very Important Extremely Important
 
-
 (Provided full main.py FastAPI application code to verify alignment with original design)
-
 
 there is almost 300 lines of code does it strictly follow the code i gave them
 
 Promt for remove enthusiast mode and add the Brand reliability modeling but i need good criteria ehich was on the enusiatic section but not in casual page such as Number of Drivers App Support Warranty (Years) Stand Orientation
 
-
 ---
 
 ## What I Did
 
-- Identified missing criteria:
+- Identified and corrected missing evaluation criteria:
   - Mic
   - Weight
   - Price
-  - Bass scale
+  - Bass (scaled)
   - Battery size (optional)
   - Battery tested loudness (optional)
-  - Frequency range (for audio-focused users)
+  - Frequency range (for advanced audio users)
 
-- Ensured TOPSIS properly categorizes attributes into:
-  - Benefit
-  - Cost
+- Ensured that TOPSIS properly categorizes attributes into:
+  - Benefit criteria
+  - Cost criteria
 
-- Decided to allow users to override direction (benefit/cost) during weight assignment.
+- Introduced user-controlled direction override (benefit/cost) during weight assignment for selected attributes.
 
 - Clarified charging type logic:
-  - Must be USB-C
-  - Prefer USB-C
-  - Not weight-based importance scale
+  - Must be USB-C (filter)
+  - Prefer USB-C (penalty)
+  - Not treated as weight-based importance
 
-- Reviewed full `main.py` FastAPI file (~300 lines) to check:
-  - Mode separation
-  - TOPSIS integration
+- Reviewed the full `main.py` FastAPI file (~300 lines) to validate:
+  - Mode separation logic
+  - Correct integration of TOPSIS pipeline
   - Penalty multipliers
-  - Charging filtering logic
+  - Charging filtering mechanism
   - Brand reliability and clarity degradation penalties
 
-- Decided to:
-  - Remove Enthusiast mode.
-  - Merge strong technical criteria into a single improved model.
-  - Add brand reliability modeling.
-  - Retain advanced criteria:
+- Refined system architecture decisions:
+  - Removed Enthusiast mode to reduce complexity.
+  - Consolidated technical and casual features into a single improved model.
+  - Added structured Brand Reliability modeling.
+  - Retained advanced criteria from the enthusiast section:
     - Number of Drivers
     - App Support
     - Warranty (Years)
@@ -823,16 +928,69 @@ Promt for remove enthusiast mode and add the Brand reliability modeling but i ne
 
 ---
 
+## References That Influenced My Approach
+
+- Internal review of FastAPI application structure.
+- TOPSIS theoretical requirements for benefit/cost classification.
+- Previous architectural decisions from Days 5 and 6.
+- ChatGPT-assisted verification of scoring logic alignment.
+
+---
+
+## What I Accepted / Rejected / Modified
+
+Accepted:
+- Direction override as a user-controlled feature.
+- Explicit cost vs benefit classification inside TOPSIS engine.
+- Brand reliability as a structured penalty factor.
+
+Rejected:
+- Multiple user modes that increased architectural complexity.
+- Treating charging type as a weighted criterion.
+- Over-segmentation of advanced users.
+
+Modified:
+- Converted system into a single strong deterministic model.
+- Integrated advanced criteria without creating separate mode layers.
+- Simplified routing structure by removing Enthusiast mode.
+- Refined penalty modeling to be configurable and modular.
+
+---
+
+## Impact on System Design
+
+Day 7 was a structural refinement phase rather than a research-heavy phase.
+
+The system matured into:
+
+- A single, deterministic TOPSIS engine.
+- Direction-flexible criteria handling.
+- Configurable penalty multipliers.
+- Clear separation between:
+  - Hard filters (e.g., USB-C requirement)
+  - Weighted scoring
+  - Post-score penalty adjustment
+- Cleaner FastAPI routing structure.
+
+This stage improved:
+
+- Maintainability
+- Clarity
+- Architectural coherence
+- Deterministic transparency
+
+---
+
 ## Summary
 
-Day 7 focused on structural refinement rather than new research.  
-The system evolved toward:
+Day 7 focused on consolidation and structural maturity.
 
-- Single strong deterministic TOPSIS engine.
-- Direction-overridable criteria.
-- Configurable penalty modeling.
-- Cleaner separation between mandatory filters and weighted scoring.
-- Removal of unnecessary mode complexity.
-- Integration of reliability modeling into core architecture.
+Key outcomes:
 
-The architecture matured into a modular, penalty-aware, direction-flexible TOPSIS-based decision 
+- Removed unnecessary mode complexity.
+- Strengthened benefit/cost categorization.
+- Added direction override capability.
+- Integrated reliability modeling.
+- Simplified the overall architecture while increasing robustness.
+
+The system evolved into a modular, penalty-aware, direction-flexible TOPSIS-based decision engine with a cleaner and more maintainable structure.
